@@ -16,6 +16,7 @@ const backpack = {
     left: 26,
     right: 26,
   },
+  lidOpen: false,
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
@@ -23,4 +24,26 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  renameBackpack: function (newName) {
+    this.name = newName;
+  },
+  changeVolume: function (volume) {
+    this.volume = volume;
+  },
+  changeColor: function (color) {
+    this.color = color;
+  },
+  changePocketNum: function (pocketCount) {
+    this.pocketCount = pocketCount;
+  },
 };
+
+console.log(backpack);
+
+console.log("This is the backpack name before:", backpack.name);
+backpack.renameBackpack("Travel Backpack");
+console.log("This is the backpack name after:", backpack.name);
+
+console.log("This is the volume before:", backpack.volume);
+backpack.changeVolume(50);
+console.log("This is the volume after:", backpack.volume);
